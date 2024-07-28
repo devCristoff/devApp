@@ -4,8 +4,11 @@
     {
         private static readonly Random _random = new Random();
 
-        public static double GetRandomNumber(double minValue = 100, double maxValue = 2000)
+        public static double GetRandomNumber(int numOrder)
         {
+            double minValue = 10;
+            double maxValue = numOrder * 1000;
+
             double randomValue = _random.NextDouble() * (maxValue - minValue) + minValue;
 
             return Math.Round(randomValue, 2);

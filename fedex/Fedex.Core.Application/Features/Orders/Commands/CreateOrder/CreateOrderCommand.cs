@@ -5,7 +5,7 @@ using Fedex.Core.Application.Helpers;
 namespace Fedex.Core.Application.Features.Orders.Commands.CreateOrder
 {
     /// <summary>
-    /// Parámetros para la creación de una orden
+    /// Parameters for creating an order
     /// </summary>  
     public class CreateOrderCommand : IRequest<OrderResponse>
     {
@@ -22,9 +22,9 @@ namespace Fedex.Core.Application.Features.Orders.Commands.CreateOrder
 
         public async Task<OrderResponse> Handle(CreateOrderCommand command, CancellationToken cancellationToken)
         {
-            var orderTotal = new OrderResponse();
-            orderTotal.Total = RandomNumberHelper.GetRandomNumber();
-            return orderTotal;
+            var orderResponse = new OrderResponse();
+            orderResponse.Total = RandomNumberHelper.GetRandomNumber(command.PackageDimensions.Count);
+            return orderResponse;
         }
     }
 }
