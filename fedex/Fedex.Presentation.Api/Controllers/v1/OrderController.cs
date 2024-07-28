@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net.Mime;
 using Fedex.Core.Application.Features.Orders.Commands.CreateOrder;
+using Fedex.Core.Application.DTOs.Orders;
 
 namespace Fedex.WebApi.Controllers.v1
 {
@@ -15,7 +16,7 @@ namespace Fedex.WebApi.Controllers.v1
 
         [HttpPost]
         [Consumes(MediaTypeNames.Application.Json)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OrderResponse))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [SwaggerOperation(
@@ -29,8 +30,7 @@ namespace Fedex.WebApi.Controllers.v1
                 return BadRequest();
             }
 
-            await Mediator.Send(command);
-            return NoContent();
+            return Ok(await Mediator.Send(command));
         }
     }
 }
