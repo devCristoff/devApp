@@ -20,8 +20,8 @@ namespace Fedex.WebApi.Controllers.v1
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [SwaggerOperation(
-                 Summary = "Creacion de pedido",
-                 Description = "Recibe los parametros necesarios para crear un nuevo pedido"
+            Summary = "Order creation",
+            Description = "Receive the necessary parameters to create a new order"
         )]
         public async Task<IActionResult> Post([FromBody] CreateOrderCommand command)
         {

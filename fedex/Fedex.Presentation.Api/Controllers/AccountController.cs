@@ -8,7 +8,7 @@ namespace Fedex.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [SwaggerTag("Sistema de membresía")]
+    [SwaggerTag("Authentication")]
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;
@@ -21,8 +21,8 @@ namespace Fedex.WebApi.Controllers
         [HttpPost("authenticate")]
         [Consumes(MediaTypeNames.Application.Json)]
         [SwaggerOperation(
-            Summary = "Login de usuario",
-            Description = "Autentica un usuario en el sistema y le retorna un JWT"
+            Summary = "User Login",
+            Description = "Authenticates a user in the system and returns a JWT"
         )]
         public async Task<IActionResult> AuthenticateAsync(AuthenticationRequest request)
         {

@@ -3,7 +3,7 @@
 namespace Fedex.Core.Application.DTOs.Account
 {
     /// <summary>
-    /// Parámetros para realizar la autenticación del usuario
+    /// Parameters to perform user authentication
     /// </summary> 
     public class AuthenticationRequest
     {
