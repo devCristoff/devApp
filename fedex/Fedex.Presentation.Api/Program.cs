@@ -1,9 +1,11 @@
+using Fedex.Core.Application;
 using Fedex.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddIdentityInfrastructure(builder.Configuration);
+builder.Services.AddApplicationLayer();
 builder.Services.AddControllers();
 // Dependency Injections
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); // IHttpContextAccesor
