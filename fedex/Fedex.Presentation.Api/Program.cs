@@ -20,6 +20,7 @@ builder.Services.AddHealthChecks();
 builder.Services.AddSwaggerExtension();
 builder.Services.AddApiVersioningExtension();
 builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
 // Dependency Injections
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); // IHttpContextAccesor
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
