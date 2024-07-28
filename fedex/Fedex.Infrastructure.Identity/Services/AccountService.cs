@@ -36,7 +36,7 @@ namespace Fedex.Infrastructure.Identity.Services
             if (user == null)
             {
                 response.HasError = true;
-                response.Error = $"No accounts registered with email or username{request.Email}";
+                response.Error = $"No accounts registered with email: {request.Email}";
                 return response;
 
             }
