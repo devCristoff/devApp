@@ -6,7 +6,7 @@
 
         public static double GetRandomNumber(int numOrder)
         {
-            double minValue = 10;
+            double minValue = 100;
             double maxValue = numOrder * 1000;
 
             double randomValue = _random.NextDouble() * (maxValue - minValue) + minValue;
