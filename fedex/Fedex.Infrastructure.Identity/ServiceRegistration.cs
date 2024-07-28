@@ -13,6 +13,7 @@ using Fedex.Infrastructure.Identity.Contexts;
 using Fedex.Infrastructure.Identity.Entities;
 using Fedex.Infrastructure.Identity.Services;
 using System.Text;
+using System.Net;
 
 namespace Fedex.Infrastructure.Identity
 {
@@ -61,23 +62,23 @@ namespace Fedex.Infrastructure.Identity
                     OnAuthenticationFailed = context =>
                     {
                         context.NoResult();
-                        context.Response.StatusCode = 500;
+                        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         context.Response.ContentType = "text/plain";
                         return context.Response.WriteAsync(context.Exception.ToString());
                     },
                     OnChallenge = context =>
                     {
                         context.HandleResponse();
-                        context.Response.StatusCode = 401;
+                        context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
                         context.Response.ContentType = "application/json";
-                        var result = JsonConvert.SerializeObject(new Response<string>("You are not Authorized"));
+                        var result = JsonConvert.SerializeObject(new Response<string>("You are not authorized"));
                         return context.Response.WriteAsync(result);
                     },
                     OnForbidden = context =>
                     {
-                        context.Response.StatusCode = 403;
+                        context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
                         context.Response.ContentType = "application/json";
-                        var result = JsonConvert.SerializeObject(new Response<string>("You are not authorized to access this resource"));
+                        var result = JsonConvert.SerializeObject(new Response<string>("You do not have permission to access this resource"));
                         return context.Response.WriteAsync(result);
                     }
                 };
