@@ -399,3 +399,4 @@ FodyWeavers.xsd
 /fedex/Fedex.Infrastructure.Identity/Migrations
 /Domex/Domex.Presentation.Api/appsettings.json
 /Domex/Domex.Presentation.Api/appsettings.Development.json
+/Domex/Domex.Infrastructure.Identity/Migrations
