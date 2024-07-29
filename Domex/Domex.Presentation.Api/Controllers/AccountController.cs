@@ -24,7 +24,7 @@ namespace Domex.WebApi.Controllers
             Summary = "User Login",
             Description = "Authenticates a user in the system and returns a JWT"
         )]
-        public async Task<IActionResult> AuthenticateAsync(AuthenticationRequest request)
+        public async Task<IActionResult> AuthenticateAsync([FromBody] AuthenticationRequest request)
         {
             return Ok(await _accountService.AuthenticateAsync(request));
         }
