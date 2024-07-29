@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Fedex.Core.Application.DTOs.Account;
-using Fedex.Core.Application.Interfaces.Services;
+using Domex.Core.Application.DTOs.Account;
+using Domex.Core.Application.Interfaces.Services;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net.Mime;
 
-namespace Fedex.WebApi.Controllers
+namespace Domex.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

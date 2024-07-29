@@ -1,4 +1,4 @@
-﻿namespace Fedex.Core.Application.Helpers
+﻿namespace Domex.Core.Application.Helpers
 {
     public class RandomNumberHelper
     {

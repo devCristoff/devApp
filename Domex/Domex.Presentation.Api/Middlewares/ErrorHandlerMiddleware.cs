@@ -1,9 +1,9 @@
-﻿using Fedex.Core.Application.Exceptions;
-using Fedex.Core.Application.Wrappers;
+﻿using Domex.Core.Application.Exceptions;
+using Domex.Core.Application.Wrappers;
 using System.Net;
 using System.Text.Json;
 
-namespace Fedex.WebApi.Middlewares
+namespace Domex.WebApi.Middlewares
 {
     public class ErrorHandlerMiddleware
     {

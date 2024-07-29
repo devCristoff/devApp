@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Fedex.Core.Application
+namespace Domex.Core.Application
 {
     //Design pattern --> Decorator - Extensions methods
     public static class ServiceRegistration

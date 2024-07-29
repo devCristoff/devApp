@@ -1,7 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Fedex.WebApi.Extensions
+namespace Domex.WebApi.Extensions
 {
     public static class ServiceExtension
     {
@@ -15,7 +15,7 @@ namespace Fedex.WebApi.Extensions
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Fedex API",
+                    Title = "Domex API",
                     Description = "This Api will be responsible for overall data distribution",
                     Contact = new OpenApiContact
                     {

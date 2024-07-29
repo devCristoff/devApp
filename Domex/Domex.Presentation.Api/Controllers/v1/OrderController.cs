@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net.Mime;
-using Fedex.Core.Application.Features.Orders.Commands.CreateOrder;
-using Fedex.Core.Application.DTOs.Orders;
+using Domex.Core.Application.Features.Orders.Commands.CreateOrder;
+using Domex.Core.Application.DTOs.Orders;
 
-namespace Fedex.WebApi.Controllers.v1
+namespace Domex.WebApi.Controllers.v1
 {
     [ApiVersion("1.0")]
     [Authorize(Roles = "Partner")]

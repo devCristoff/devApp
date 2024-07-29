@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using Fedex.Core.Application.DTOs.Orders;
-using Fedex.Core.Application.Helpers;
+using Domex.Core.Application.DTOs.Orders;
+using Domex.Core.Application.Helpers;
 
-namespace Fedex.Core.Application.Features.Orders.Commands.CreateOrder
+namespace Domex.Core.Application.Features.Orders.Commands.CreateOrder
 {
     /// <summary>
     /// Parameters for creating an order

@@ -1,4 +1,4 @@
-﻿namespace Fedex.Core.Application.DTOs.Orders
+﻿namespace Domex.Core.Application.DTOs.Orders
 {
     public class OrderResponse
     {

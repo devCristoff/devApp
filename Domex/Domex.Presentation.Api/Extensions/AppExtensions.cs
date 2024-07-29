@@ -1,7 +1,7 @@
-﻿using Fedex.WebApi.Middlewares;
+﻿using Domex.WebApi.Middlewares;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace Fedex.WebApi.Extensions
+namespace Domex.WebApi.Extensions
 {
     public static class AppExtensions
     {
