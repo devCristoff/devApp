@@ -1,4 +1,4 @@
-﻿namespace Domex.Core.Application.Wrappers
+﻿namespace Vimenpaq.Core.Application.Wrappers
 {
     public class Response<T>
     {

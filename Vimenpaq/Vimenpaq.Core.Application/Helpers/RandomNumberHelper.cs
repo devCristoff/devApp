@@ -1,4 +1,4 @@
-﻿namespace Domex.Core.Application.Helpers
+﻿namespace Vimenpaq.Core.Application.Helpers
 {
     public class RandomNumberHelper
     {

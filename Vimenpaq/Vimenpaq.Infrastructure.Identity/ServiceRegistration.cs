@@ -6,16 +6,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
-using Domex.Core.Application.Interfaces.Services;
-using Domex.Core.Application.Wrappers;
-using Domex.Core.Domain.Settings;
-using Domex.Infrastructure.Identity.Contexts;
-using Domex.Infrastructure.Identity.Entities;
-using Domex.Infrastructure.Identity.Services;
+using Vimenpaq.Core.Application.Interfaces.Services;
+using Vimenpaq.Core.Application.Wrappers;
+using Vimenpaq.Core.Domain.Settings;
+using Vimenpaq.Infrastructure.Identity.Contexts;
+using Vimenpaq.Infrastructure.Identity.Entities;
+using Vimenpaq.Infrastructure.Identity.Services;
 using System.Text;
 using System.Net;
 
-namespace Domex.Infrastructure.Identity
+namespace Vimenpaq.Infrastructure.Identity
 {
     //Design pattern --> Decorator - Extensions methods
     public static class ServiceRegistration

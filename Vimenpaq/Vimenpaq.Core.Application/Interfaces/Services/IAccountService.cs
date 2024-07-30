@@ -1,6 +1,6 @@
-﻿using Domex.Core.Application.DTOs.Account;
+﻿using Vimenpaq.Core.Application.DTOs.Account;
 
-namespace Domex.Core.Application.Interfaces.Services
+namespace Vimenpaq.Core.Application.Interfaces.Services
 {
     public interface IAccountService
     {

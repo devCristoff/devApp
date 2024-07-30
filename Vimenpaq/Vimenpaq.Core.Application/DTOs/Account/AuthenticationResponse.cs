@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Domex.Core.Application.DTOs.Account
+namespace Vimenpaq.Core.Application.DTOs.Account
 {
     public class AuthenticationResponse
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Domex.Infrastructure.Identity.Entities
+namespace Vimenpaq.Infrastructure.Identity.Entities
 {
     public class ApplicationUser : IdentityUser
     {

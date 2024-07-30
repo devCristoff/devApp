@@ -2,7 +2,7 @@
 using Vimenpaq.Core.Application.Interfaces.Services;
 using Vimenpaq.Core.Application.Services;
 
-namespace Domex.Core.Application
+namespace Vimenpaq.Core.Application
 {
     //Design pattern --> Decorator - Extensions methods
     public static class ServiceRegistration

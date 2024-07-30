@@ -1,4 +1,4 @@
-﻿namespace Domex.Core.Application.Enums
+﻿namespace Vimenpaq.Core.Application.Enums
 {
     public enum Roles
     {

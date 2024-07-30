@@ -1,4 +1,4 @@
-﻿namespace Domex.Core.Application.DTOs.Orders
+﻿namespace Vimenpaq.Core.Application.DTOs.Orders
 {
     public class OrderResponse
     {

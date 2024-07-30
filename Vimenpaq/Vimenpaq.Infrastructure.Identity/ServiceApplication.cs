@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
-using Domex.Infrastructure.Identity.Entities;
-using Domex.Infrastructure.Identity.Seeds;
+using Vimenpaq.Infrastructure.Identity.Entities;
+using Vimenpaq.Infrastructure.Identity.Seeds;
 
-namespace Domex.Infrastructure.Identity
+namespace Vimenpaq.Infrastructure.Identity
 {
     //Design pattern --> Decorator - Extensions methods
     public static class ServiceApplication

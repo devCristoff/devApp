@@ -1,6 +1,6 @@
 ﻿using Swashbuckle.AspNetCore.Annotations;
 
-namespace Domex.Core.Application.DTOs.Account
+namespace Vimenpaq.Core.Application.DTOs.Account
 {
     /// <summary>
     /// Parameters to perform user authentication

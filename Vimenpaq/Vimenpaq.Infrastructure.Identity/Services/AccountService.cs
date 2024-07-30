@@ -1,18 +1,18 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Domex.Core.Application.DTOs.Account;
-using Domex.Core.Application.Exceptions;
-using Domex.Core.Application.Interfaces.Services;
-using Domex.Core.Domain.Settings;
-using Domex.Infrastructure.Identity.Entities;
+using Vimenpaq.Core.Application.DTOs.Account;
+using Vimenpaq.Core.Application.Exceptions;
+using Vimenpaq.Core.Application.Interfaces.Services;
+using Vimenpaq.Core.Domain.Settings;
+using Vimenpaq.Infrastructure.Identity.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Domex.Infrastructure.Identity.Services
+namespace Vimenpaq.Infrastructure.Identity.Services
 {
     public class AccountService : IAccountService
     {

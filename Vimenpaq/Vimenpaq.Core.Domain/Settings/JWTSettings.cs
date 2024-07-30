@@ -1,4 +1,4 @@
-﻿namespace Domex.Core.Domain.Settings
+﻿namespace Vimenpaq.Core.Domain.Settings
 {
     public class JWTSettings
     {

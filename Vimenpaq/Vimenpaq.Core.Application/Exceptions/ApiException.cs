@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Domex.Core.Application.Exceptions
+namespace Vimenpaq.Core.Application.Exceptions
 {
     public class ApiException : Exception
     {

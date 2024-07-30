@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Domex.Core.Application.Enums;
-using Domex.Infrastructure.Identity.Entities;
+using Vimenpaq.Core.Application.Enums;
+using Vimenpaq.Infrastructure.Identity.Entities;
 
-namespace Domex.Infrastructure.Identity.Seeds
+namespace Vimenpaq.Infrastructure.Identity.Seeds
 {
     public static class DefaulPartnerUser
     {

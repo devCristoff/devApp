@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Domex.Core.Application.Enums;
+using Vimenpaq.Core.Application.Enums;
 
-namespace Domex.Infrastructure.Identity.Seeds
+namespace Vimenpaq.Infrastructure.Identity.Seeds
 {
     public static class DefaultRoles
     {

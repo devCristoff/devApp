@@ -1,6 +1,6 @@
-﻿using Domex.Core.Application.DTOs.Orders;
-using Domex.Core.Application.Helpers;
-using Domex.Core.Application.Wrappers;
+﻿using Vimenpaq.Core.Application.DTOs.Orders;
+using Vimenpaq.Core.Application.Helpers;
+using Vimenpaq.Core.Application.Wrappers;
 using Vimenpaq.Core.Application.DTOs.Orders;
 using Vimenpaq.Core.Application.Interfaces.Services;
 

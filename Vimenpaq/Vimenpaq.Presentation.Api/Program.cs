@@ -1,5 +1,5 @@
-using Domex.Core.Application;
-using Domex.Infrastructure.Identity;
+using Vimenpaq.Core.Application;
+using Vimenpaq.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 

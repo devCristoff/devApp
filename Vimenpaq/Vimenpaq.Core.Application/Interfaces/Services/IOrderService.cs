@@ -1,5 +1,5 @@
-﻿using Domex.Core.Application.DTOs.Orders;
-using Domex.Core.Application.Wrappers;
+﻿using Vimenpaq.Core.Application.DTOs.Orders;
+using Vimenpaq.Core.Application.Wrappers;
 using Vimenpaq.Core.Application.DTOs.Orders;
 
 namespace Vimenpaq.Core.Application.Interfaces.Services

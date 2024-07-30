@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Domex.Infrastructure.Identity.Entities;
+using Vimenpaq.Infrastructure.Identity.Entities;
 
-namespace Domex.Infrastructure.Identity.Contexts
+namespace Vimenpaq.Infrastructure.Identity.Contexts
 {
     public class IdentityContext : IdentityDbContext<ApplicationUser>
     {
