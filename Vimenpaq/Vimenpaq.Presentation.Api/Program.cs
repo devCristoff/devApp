@@ -1,5 +1,6 @@
 using Vimenpaq.Core.Application;
 using Vimenpaq.Infrastructure.Identity;
+using Vimenpaq.WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddIdentityInfrastructure(builder.Configuration);
 builder.Services.AddApplicationLayer();
 builder.Services.AddControllers();
+builder.Services.AddSwaggerExtension();
+builder.Services.AddApiVersioningExtension();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
