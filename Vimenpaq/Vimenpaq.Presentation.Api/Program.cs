@@ -30,6 +30,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseSwagggerExtension();
+app.UseErrorHandlerMiddleware();
 
 app.MapControllers();
 
