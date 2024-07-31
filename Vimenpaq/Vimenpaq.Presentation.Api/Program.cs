@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddIdentityInfrastructure(builder.Configuration);
 builder.Services.AddApplicationLayer();
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => {
+    options.RespectBrowserAcceptHeader = true; // Optional, respect header Accept
+}).AddXmlSerializerFormatters(); // Add XML support
 builder.Services.AddSwaggerExtension();
 builder.Services.AddApiVersioningExtension();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
