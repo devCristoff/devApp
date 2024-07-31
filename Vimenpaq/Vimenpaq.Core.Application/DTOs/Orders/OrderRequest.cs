@@ -2,8 +2,8 @@
 {
     public class OrderRequest
     {
-        public string Consigee { get; set; }
-        public string Consignor { get; set; }
-        public List<string> Cartons { get; set; }
+        public string Source { get; set; }
+        public string Destination { get; set; }
+        public List<string> Packages { get; set; }
     }
 }
