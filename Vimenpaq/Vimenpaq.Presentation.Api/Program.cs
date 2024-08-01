@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Vimenpaq.Core.Application;
 using Vimenpaq.Infrastructure.Identity;
 using Vimenpaq.WebApi.Extensions;
@@ -9,9 +10,19 @@ builder.Services.AddIdentityInfrastructure(builder.Configuration);
 builder.Services.AddApplicationLayer();
 builder.Services.AddControllers(options => {
     options.RespectBrowserAcceptHeader = true; // Optional, respect header Accept
+    options.Filters.Add(new ProducesAttribute("application/xml"));
+}).ConfigureApiBehaviorOptions(options =>
+{
+    options.SuppressInferBindingSourcesForParameters = true;
+    options.SuppressMapClientErrors = true;
 }).AddXmlSerializerFormatters(); // Add XML support
+builder.Services.AddHealthChecks();
 builder.Services.AddSwaggerExtension();
 builder.Services.AddApiVersioningExtension();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+// Dependency Injections
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); // IHttpContextAccesor
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -26,12 +37,20 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseSwagggerExtension();
 app.UseErrorHandlerMiddleware();
+app.UseHealthChecks("/health");
+app.UseSession();
 
 app.MapControllers();
 
