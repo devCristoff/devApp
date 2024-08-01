@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json;
 using Vimenpaq.Core.Application.Interfaces.Services;
 using Vimenpaq.Core.Application.Wrappers;
 using Vimenpaq.Core.Domain.Settings;
@@ -14,6 +13,7 @@ using Vimenpaq.Infrastructure.Identity.Entities;
 using Vimenpaq.Infrastructure.Identity.Services;
 using System.Text;
 using System.Net;
+using System.Xml.Serialization;
 
 namespace Vimenpaq.Infrastructure.Identity
 {
@@ -70,16 +70,32 @@ namespace Vimenpaq.Infrastructure.Identity
                     {
                         context.HandleResponse();
                         context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
-                        context.Response.ContentType = "application/json";
-                        var result = JsonConvert.SerializeObject(new Response<string>("You are not authorized"));
-                        return context.Response.WriteAsync(result);
+                        context.Response.ContentType = "application/xml";
+                        var response = new Response<string>("You are not authorized");
+
+                        var xmlSerializer = new XmlSerializer(typeof(Response<string>));
+
+                        using (var stringWriter = new StringWriter())
+                        {
+                            xmlSerializer.Serialize(stringWriter, response);
+                            var serializedXml = stringWriter.ToString();
+                            return context.Response.WriteAsync(serializedXml);
+                        }
                     },
                     OnForbidden = context =>
                     {
                         context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
-                        context.Response.ContentType = "application/json";
-                        var result = JsonConvert.SerializeObject(new Response<string>("You do not have permission to access this resource"));
-                        return context.Response.WriteAsync(result);
+                        context.Response.ContentType = "application/xml";
+                        var response = new Response<string>("You do not have permission to access this resource");
+                        
+                        var xmlSerializer = new XmlSerializer(typeof(Response<string>));
+
+                        using (var stringWriter = new StringWriter())
+                        {
+                            xmlSerializer.Serialize(stringWriter, response);
+                            var serializedXml = stringWriter.ToString();
+                            return context.Response.WriteAsync(serializedXml);
+                        }
                     }
                 };
 
