@@ -20,7 +20,9 @@ namespace Vimenpaq.WebApi.Controllers
 
         [HttpPost("authenticate")]
         [Consumes(MediaTypeNames.Application.Xml)]
-        [Produces(MediaTypeNames.Application.Xml)]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AuthenticationResponse))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [SwaggerOperation(
             Summary = "User Login",
             Description = "Authenticates a user in the system and returns a JWT"
