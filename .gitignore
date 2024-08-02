@@ -409,3 +409,5 @@ FodyWeavers.xsd
 /Vimenpaq/Vimenpaq.Presentation.Api/appsettings.json
 /Vimenpaq/Vimenpaq.Presentation.Api/appsettings.Development.json
 /Vimenpaq/Vimenpaq.Infrastructure.Identity/Migrations
+# Cristoff
+cristoff/.env
