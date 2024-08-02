@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const config = require('./config');
 const FedexService = require('./services/FedexService');
+const DomexService = require('./services/DomexService');
 const VimenpaqService = require('./services/VimenpaqService');
 
 const middleware = express.Router();
@@ -20,6 +21,19 @@ middleware.use('/api/offer/best-offer', async (req, res, next) => {
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "An error has occured trying to authenticate with FEDEX" });
+    }
+});
+
+middleware.use('/api/offer/best-offer', async (req, res, next) => {
+    try {
+        const domexResponse = await DomexService.Authenticate();
+        const domexData = await domexResponse.json();
+        req.domexToken = domexData.jwToken;
+
+        next();
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "An error has occured trying to authenticate with DOMEX" });
     }
 });
 
