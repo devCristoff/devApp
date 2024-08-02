@@ -27,7 +27,20 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); // I
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Enable Cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("NewPolicy", app =>
+    {
+        app.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("NewPolicy"); //Authorize Cors
 
 await app.Services.AddIdentitySeeds();
 
