@@ -1,5 +1,5 @@
 const FedexService = require('../services/FedexService');
-const DomexService = require('../services/FedexService');
+const DomexService = require('../services/DomexService');
 const VimenpaqService = require('../services/VimenpaqService');
 
 exports.PostBestOffer = async (req, res, next) => {    
@@ -8,12 +8,16 @@ exports.PostBestOffer = async (req, res, next) => {
 
         const fedexOfferResponse = await FedexService.CreateOrder(req.fedexToken, originAddress, destinyAddress, packageDimensions);
         const fedexData = await fedexOfferResponse.json()
+
+        const domexOfferResponse = await DomexService.CreateOrder(req.domexToken, originAddress, destinyAddress, packageDimensions);
+        const domexData = await domexOfferResponse.json()
         
         const vimenpaqOfferResponse = await VimenpaqService.CreateOrder(req.vimenpaqToken, originAddress, destinyAddress, packageDimensions);
         const vimenpaqData = await vimenpaqOfferResponse.ResponseOfOrderResponse;
         
         const offers = [
             { offer: fedexData.data.total, company: 'Fedex'  },
+            { offer: domexData.data.amount, company: 'Domex'  },
             { offer: vimenpaqData.Data[0].Quote[0], company: 'Vimenpaq' },
         ];
         
