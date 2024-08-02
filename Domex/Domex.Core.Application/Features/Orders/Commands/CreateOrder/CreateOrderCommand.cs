@@ -25,7 +25,7 @@ namespace Domex.Core.Application.Features.Orders.Commands.CreateOrder
         {
             var orderResponse = new OrderResponse();
             orderResponse.Amount = RandomNumberHelper.GetRandomNumber(command.Cartons.Count);
-            return orderResponse;
+            return new Response<OrderResponse>(orderResponse);
         }
     }
 }
