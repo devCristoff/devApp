@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const config = require('./config');
 const FedexService = require('./services/FedexService');
+const VimenpaqService = require('./services/VimenpaqService');
 
 const middleware = express.Router();
 
@@ -11,14 +12,27 @@ middleware.use(cors());
 
 middleware.use('/api/offer/best-offer', async (req, res, next) => {
     try {
-        const response = await FedexService.Authenticate();
-        const data = await response.json();
-        req.fedexToken = data.jwToken;
+        const fedexResponse = await FedexService.Authenticate();
+        const fedexData = await fedexResponse.json();
+        req.fedexToken = fedexData.jwToken;
 
         next();
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "An error has occured trying to authenticate with FEDEX" });
+    }
+});
+
+middleware.use('/api/offer/best-offer', async (req, res, next) => {
+    try {
+        const vimenpaqResponse = await VimenpaqService.Authenticate();
+        const vimenpaqData = await vimenpaqResponse.AuthenticationResponse;
+        req.vimenpaqToken = vimenpaqData.JWToken[0];
+
+        next();
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "An error has occured trying to authenticate with VIMENPAQ" });
     }
 });
 
