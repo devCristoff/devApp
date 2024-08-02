@@ -26,7 +26,7 @@ namespace Fedex.WebApi.Controllers.v1
         )]
         public async Task<IActionResult> Post([FromBody] CreateOrderCommand command)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || command.PackageDimensions == null)
             {
                 return BadRequest();
             }
