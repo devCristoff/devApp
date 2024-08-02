@@ -10,8 +10,13 @@ namespace Domex.Core.Application.Features.Orders.Commands.CreateOrder
     /// </summary>  
     public class CreateOrderCommand : IRequest<Response<OrderResponse>>
     {
+        /// <example>C. Porfirio Herrera, Santo Domingo</example>
         public string Consigee { get; set; }
+
+        /// <example>C2M8+X9R, Av. Gregorio Luperón, Santo Domingo</example>
         public string Consignor { get; set; }
+
+        /// <example>["10x20x30", "30X20X30"]</example>
         public List<string> Cartons { get; set; }
     }
 
