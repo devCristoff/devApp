@@ -4,6 +4,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using System.Net.Mime;
 using Domex.Core.Application.Features.Orders.Commands.CreateOrder;
 using Domex.Core.Application.DTOs.Orders;
+using Domex.Core.Application.Wrappers;
 
 namespace Domex.WebApi.Controllers.v1
 {
@@ -16,7 +17,7 @@ namespace Domex.WebApi.Controllers.v1
 
         [HttpPost]
         [Consumes(MediaTypeNames.Application.Json)]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OrderResponse))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response<OrderResponse>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [SwaggerOperation(
