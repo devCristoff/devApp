@@ -15,13 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{67C1AC0D-4BDE-4A04-BD0E-4FEF06CA61DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vimenpaq.Core.Domain", "Vimenpaq.Core.Domain\Vimenpaq.Core.Domain.csproj", "{1F6730BA-6F90-4FBB-A228-24DAD46395E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vimenpaq.Core.Domain", "Vimenpaq.Core.Domain\Vimenpaq.Core.Domain.csproj", "{1F6730BA-6F90-4FBB-A228-24DAD46395E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vimenpaq.Core.Application", "Vimenpaq.Core.Application\Vimenpaq.Core.Application.csproj", "{228D740A-B595-447E-9BF1-32A130F60EEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vimenpaq.Core.Application", "Vimenpaq.Core.Application\Vimenpaq.Core.Application.csproj", "{228D740A-B595-447E-9BF1-32A130F60EEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vimenpaq.Infrastructure.Identity", "Vimenpaq.Infrastructure.Identity\Vimenpaq.Infrastructure.Identity.csproj", "{AC01D2D4-F36D-4C09-A97E-CC00D172688C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vimenpaq.Infrastructure.Identity", "Vimenpaq.Infrastructure.Identity\Vimenpaq.Infrastructure.Identity.csproj", "{AC01D2D4-F36D-4C09-A97E-CC00D172688C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vimenpaq.Presentation.Api", "Vimenpaq.Presentation.Api\Vimenpaq.Presentation.Api.csproj", "{A45DCDCB-3C26-480A-9084-526EA686F485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vimenpaq.Presentation.Api", "Vimenpaq.Presentation.Api\Vimenpaq.Presentation.Api.csproj", "{A45DCDCB-3C26-480A-9084-526EA686F485}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{D0052D2F-8D6C-4B4A-B1E2-28741CDB907D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vimenpaq.UnitTest.Api", "Vimenpaq.UnitTest.Api\Vimenpaq.UnitTest.Api.csproj", "{6145254A-C401-4D66-9ADA-720B1B86C80D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,10 @@ Global
 		{A45DCDCB-3C26-480A-9084-526EA686F485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A45DCDCB-3C26-480A-9084-526EA686F485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A45DCDCB-3C26-480A-9084-526EA686F485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6145254A-C401-4D66-9ADA-720B1B86C80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6145254A-C401-4D66-9ADA-720B1B86C80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6145254A-C401-4D66-9ADA-720B1B86C80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6145254A-C401-4D66-9ADA-720B1B86C80D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,8 @@ Global
 		{228D740A-B595-447E-9BF1-32A130F60EEF} = {74FCF464-DACC-4DC7-A54A-45B29309E335}
 		{AC01D2D4-F36D-4C09-A97E-CC00D172688C} = {67C1AC0D-4BDE-4A04-BD0E-4FEF06CA61DC}
 		{A45DCDCB-3C26-480A-9084-526EA686F485} = {06B90CC3-8F24-42B0-98C3-F5088A880D7C}
+		{D0052D2F-8D6C-4B4A-B1E2-28741CDB907D} = {A4DB9B3B-D1CC-4198-BDC1-1D0533674A7E}
+		{6145254A-C401-4D66-9ADA-720B1B86C80D} = {D0052D2F-8D6C-4B4A-B1E2-28741CDB907D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E74576A1-52FD-4A08-87C0-7C90E09BFF63}
