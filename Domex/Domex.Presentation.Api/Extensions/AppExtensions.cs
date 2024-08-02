@@ -10,7 +10,7 @@ namespace Domex.WebApi.Extensions
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Fedex API");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Domex API");
                 options.DefaultModelRendering(ModelRendering.Model);
 ;            });
         }

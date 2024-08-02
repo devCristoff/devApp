@@ -15,13 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F8D7CB06-B694-44FA-9FAF-C76BD7B1F793}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domex.Infrastructure.Identity", "Domex.Infrastructure.Identity\Domex.Infrastructure.Identity.csproj", "{32B3C3C8-2AD3-406C-BDFE-7CB0944C38A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domex.Infrastructure.Identity", "Domex.Infrastructure.Identity\Domex.Infrastructure.Identity.csproj", "{32B3C3C8-2AD3-406C-BDFE-7CB0944C38A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domex.Core.Domain", "Domex.Core.Domain\Domex.Core.Domain.csproj", "{86709901-2167-444C-A2F5-B1D50DE4D196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domex.Core.Domain", "Domex.Core.Domain\Domex.Core.Domain.csproj", "{86709901-2167-444C-A2F5-B1D50DE4D196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domex.Core.Application", "Domex.Core.Application\Domex.Core.Application.csproj", "{240CB042-F674-453C-BEF1-E2D8553F17B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domex.Core.Application", "Domex.Core.Application\Domex.Core.Application.csproj", "{240CB042-F674-453C-BEF1-E2D8553F17B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domex.Presentation.Api", "Domex.Presentation.Api\Domex.Presentation.Api.csproj", "{B2F126A5-6E05-40D9-9003-8C69ABAA17A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domex.Presentation.Api", "Domex.Presentation.Api\Domex.Presentation.Api.csproj", "{B2F126A5-6E05-40D9-9003-8C69ABAA17A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domex.UnitTest.Api", "Domex.UnitTest.Api\Domex.UnitTest.Api.csproj", "{6A088CF6-6D6F-4CAF-80F8-CBF42F680D49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{95EB9344-7C62-4E0C-A9FE-C966E66F475B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,10 @@ Global
 		{B2F126A5-6E05-40D9-9003-8C69ABAA17A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2F126A5-6E05-40D9-9003-8C69ABAA17A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2F126A5-6E05-40D9-9003-8C69ABAA17A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A088CF6-6D6F-4CAF-80F8-CBF42F680D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A088CF6-6D6F-4CAF-80F8-CBF42F680D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A088CF6-6D6F-4CAF-80F8-CBF42F680D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A088CF6-6D6F-4CAF-80F8-CBF42F680D49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,8 @@ Global
 		{86709901-2167-444C-A2F5-B1D50DE4D196} = {234DC1B6-E434-488E-A706-7EDF290A98B7}
 		{240CB042-F674-453C-BEF1-E2D8553F17B2} = {410A69B0-CED1-4985-AFED-A7DAD78AEE1F}
 		{B2F126A5-6E05-40D9-9003-8C69ABAA17A8} = {306598B4-E6CD-4D1F-AA8B-1DCCD0D37666}
+		{6A088CF6-6D6F-4CAF-80F8-CBF42F680D49} = {95EB9344-7C62-4E0C-A9FE-C966E66F475B}
+		{95EB9344-7C62-4E0C-A9FE-C966E66F475B} = {CBDC3D05-8A1E-4FDD-A052-107DAF52802B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A122D436-1E2C-4190-929E-7AE776F34ECC}
