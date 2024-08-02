@@ -16,7 +16,7 @@ namespace Fedex.Core.Application.Features.Orders.Commands.CreateOrder
         /// <example>C2M8+X9R, Av. Gregorio Luperón, Santo Domingo</example>
         public string WarehouseAddress { get; set; }
 
-        /// <example>[10x20x30, 30x20x30]</example>
+        /// <example>["10x20x30", "30x20x30"]</example>
         public List<string> PackageDimensions { get; set; }
     }
 
