@@ -4,6 +4,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using System.Net.Mime;
 using Vimenpaq.Core.Application.DTOs.Orders;
 using Vimenpaq.Core.Application.Interfaces.Services;
+using Vimenpaq.Core.Application.Wrappers;
 
 namespace Vimenpaq.WebApi.Controllers.v1
 {
@@ -21,7 +22,7 @@ namespace Vimenpaq.WebApi.Controllers.v1
 
         [HttpPost]
         [Consumes(MediaTypeNames.Application.Xml)]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OrderResponse))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response<OrderResponse>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [SwaggerOperation(
@@ -30,7 +31,7 @@ namespace Vimenpaq.WebApi.Controllers.v1
         )]
         public async Task<IActionResult> Post([FromBody] OrderRequest order)
         {
-            if (!ModelState.IsValid || order.Packages.Count == 0)
+            if (!ModelState.IsValid || order.Packages == null)
             {
                 return BadRequest();
             }
