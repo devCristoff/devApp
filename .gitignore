@@ -396,3 +396,18 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Fedex
+/fedex/Fedex.Infrastructure.Identity/Migrations
+
+# Domex
+/Domex/Domex.Presentation.Api/appsettings.json
+/Domex/Domex.Presentation.Api/appsettings.Development.json
+/Domex/Domex.Infrastructure.Identity/Migrations
+
+# Vimenpaq
+/Vimenpaq/Vimenpaq.Presentation.Api/appsettings.json
+/Vimenpaq/Vimenpaq.Presentation.Api/appsettings.Development.json
+/Vimenpaq/Vimenpaq.Infrastructure.Identity/Migrations
+# Cristoff
+cristoff/.env
