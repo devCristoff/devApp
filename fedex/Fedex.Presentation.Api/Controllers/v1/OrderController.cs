@@ -4,6 +4,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using System.Net.Mime;
 using Fedex.Core.Application.Features.Orders.Commands.CreateOrder;
 using Fedex.Core.Application.DTOs.Orders;
+using Fedex.Core.Application.Wrappers;
 
 namespace Fedex.WebApi.Controllers.v1
 {
@@ -16,7 +17,7 @@ namespace Fedex.WebApi.Controllers.v1
 
         [HttpPost]
         [Consumes(MediaTypeNames.Application.Json)]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OrderResponse))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response<OrderResponse>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [SwaggerOperation(
@@ -25,7 +26,7 @@ namespace Fedex.WebApi.Controllers.v1
         )]
         public async Task<IActionResult> Post([FromBody] CreateOrderCommand command)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || command.PackageDimensions == null)
             {
                 return BadRequest();
             }
