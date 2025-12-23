@@ -8,7 +8,7 @@
 
 - **Descripción**: API web escalable para la cotización de envío de paquetes.
 - **Tecnologías**:
-  - **Framework**: ASP.NET Core MVC
+  - **Framework**: ASP.NET Core API
   - **ORM**: Entity Framework
   - **Seguridad**: Identity (manejo de roles y autenticación)
   - **Patrones**: CQRS, Mediator, Singleton
@@ -23,7 +23,7 @@
 
 - **Descripción**: API web escalable para la cotización de envío de paquetes.
 - **Tecnologías**:
-  - **Framework**: ASP.NET Core MVC
+  - **Framework**: ASP.NET Core API
   - **ORM**: Entity Framework
   - **Seguridad**: Identity (manejo de roles y autenticación)
   - **Patrones**: CQRS, Mediator, Singleton
@@ -38,7 +38,7 @@
 
 - **Descripción**: API web escalable para la cotización de envío de paquetes.
 - **Tecnologías**:
-  - **Framework**: ASP.NET Core MVC
+  - **Framework**: ASP.NET Core API
   - **ORM**: Entity Framework
   - **Seguridad**: Identity (manejo de roles y autenticación)
   - **Documentación**: Swagger
